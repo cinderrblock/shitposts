@@ -1,8 +1,6 @@
 
 const imageFiles = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg',
+    'beesinalexus.png',
 
 ];
 function getRandomImage() {
