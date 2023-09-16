@@ -15,6 +15,8 @@ const imageUrls = [
 ];
 
 
+
+
 function getRandomImageUrl() {
     const randomIndex = Math.floor(Math.random() * imageUrls.length);
     return imageUrls[randomIndex];
@@ -22,19 +24,16 @@ function getRandomImageUrl() {
 
 
 function displayRandomImage() {
-    const imageUrlInput = document.getElementById('image-url-input').value.trim();
     const imageContainer = document.getElementById('image-container');
     const randomImageElement = document.getElementById('random-image');
 
-
-    if (imageUrlInput) {
-        randomImageElement.src = imageUrlInput;
-    } else {
-        const randomImageUrl = getRandomImageUrl();
-        randomImageElement.src = randomImageUrl;
-    }
+    const randomImageUrl = getRandomImageUrl();
+    randomImageElement.src = randomImageUrl;
 }
 
 
 const loadImageButton = document.getElementById('load-image-button');
 loadImageButton.addEventListener('click', displayRandomImage);
+
+
+displayRandomImage();
